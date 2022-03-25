@@ -1,0 +1,282 @@
+---
+title: "SARS-CoV-2 Molecular Evolution"
+subtitle: "<hr>"
+author: "Brendan J. Kelly, MD, MS"
+institute: "Infectious Diseases & Epidemiology<br><br>![](penn_logos/Penn-Shield-Logotype-White-over-Blue-RGB-Expanded.svg){width=160px}" 
+date: "14 February 2022" #"`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer-inferno-grids-fade.css
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+    seal: false
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%"
+
+---
+exclude: true
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+options(htmltools.dir.version = FALSE)
+xaringan::summon_remark()
+library(tidyverse)
+library(gt)
+
+```
+
+```{r xaringan-tile-view, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_webcam()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_animate_css()
+xaringanExtra::use_share_again()
+xaringanExtra::use_freezeframe()
+#xaringanExtra::use_scribble(pen_color = "#56106E")
+```
+
+---
+class: top left hide-count
+background-image: url(img/giorgio-trovato-IclGoWB6wEY-unsplash.jpg)
+background-size: cover
+
+.move-top20[
+.title-text[<span style='font-size:0.9em'>SARS-CoV-2 Evolution</span>]  
+.title-subtext[<span style='font-size:0.9em'>Nucleotide Variants & Case Incidence in the Philadelphia Region</span>]  
+]  
+  
+.callout-url-leftcorner[
+.title-nametext[
+Brendan J. Kelly, MD, MS  
+Infectious Diseases & Epidemiology  
+University of Pennsylvania  
+`r format(Sys.Date(), '%d %B %Y')`  
+]
+]
+
+.footnote-right[<span style='color: white'>photo: Giorgio Trovato @unsplash</span>]  
+
+
+
+---
+exclude: true
+
+## Disclosures  
+
+.pad-left[  
+
+- No conflicts of interest.  
+
+- Research supported by:
+
+    - NIAID K23 AI121485  
+    
+    - CDC BAA 200-2016-91964  
+    
+    - CDC BAA 200-2016-91937  
+    
+    - CDC BAA 200-2018-02919  
+    
+    - **CDC BAA 200-2021-10986**   
+
+]
+
+
+
+---
+
+## Objectives    
+  
+.pad-left[  
+  
+- How do we measure SARS-CoV-2 genome change?  
+  
+    - daily, weekly, monthly?    
+    
+    - nucleotide, dN/dS, AA, gene?
+    
+    - how to pool within codons, genes?    
+
+- How does genomic change relate to changes in incidence?  
+
+  (COVID-19 case incidence and cycle threshold (Ct) co-linear) 
+  
+    
+]  
+
+
+
+---
+exclude: true
+class: top left hide-count
+background-image: url(img/yudi-haryasa-HEpUyHwJuzQ-unsplash.jpeg)
+background-size: cover
+
+## <span style='color: #093b85;'>No Man is an Island</span>
+
+
+.footnote-right[<span style='color: white'>photo: Yudi Haryasa @unsplash</span>]  
+
+
+
+---
+exclude: true
+background-image: url(figs/scv2_snv_diversity_per_position_and_time_clear.gif)
+background-size: contain
+
+
+---
+exclude: true
+background-image: url(figs/scv2_snv_diversity_per_position_and_time_shadow.gif)
+background-size: contain
+
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='85%'}
+knitr::include_graphics(path = "figs/scv2_snv_diversity_per_position_and_time_clear_color.gif")
+
+```
+
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='85%'}
+knitr::include_graphics(path = "figs/scv2_snv_diversity_per_position_and_time_shadow_color.gif")
+
+```
+
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/scv2_snv_diversity_per_position_and_time_fixed_color.png")
+
+```
+
+
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/p_phl_cases.png")
+
+```
+
+
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/scv2_snv_diversity_per_position_and_time_fixed_color.png")
+
+```
+
+
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/p_lm_logdiff_color.png")
+
+```
+
+
+
+---
+exclude: true
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/p_lm_logcases_color.png")
+
+```
+
+
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/p_lmm_logdiff_color.png")
+
+```
+
+
+
+---
+exclude: true
+
+## Conclusions    
+  
+.pad-left[
+
+- COVID-19 molecular evolution          
+
+- The Canyon Hypothesis  
+  
+  
+]
+
+
+---
+exclude: true
+
+## Acknowledgements    
+
+.pull-left[
+- __ARES Group @ Penn__
+Laurel Glaser, Kyle Rodino, Sean Loughrey, Laura Cowden,   
+Magda Wernovsky, Jennifer Han, Erik Clarke, Michael David,
+Matt Ziegler, Lauren Dutcher, Ebbing Lautenbach, Jim Harrigan, Hatem Abdallah
+
+- __Bushman Laboratory @ Penn__
+Arwa Abbas, Aoife Roche, Andrew Marques,
+Aubrey Bailey, Jacob Leiby,
+Rick Bushman
+
+- __PennCHOP Microbiome Program__
+Lisa Mattei, Casey Hofstaedter, Huanjia Zhang, Kyle Bittinger
+
+]
+
+
+.pull-right[
+- __Collman Laboratory @ Penn__
+Ize Imai, Aurea Simon Soro, John McGinniss, Ron Collman
+
+- __Division of ID @ Penn__
+Ian Frank, Pablo Tebas, Robert Gross, Emily Blumberg
+
+- __Rutgers University & Penn DBEI__
+Jason Roy, Arman Oganisian
+  
+- __CDC Prevention Epicenters__
+Clifford McDonald, Alison Laufer Halpin
+  
+- __Funding__
+<u>CDC</u>: BAAs 200-2016-91964, 200-2018-02919, 200-2021-10986,
+200-2021-10986 & <u>NIAID</u>: K23 AI121485
+
+]
+
+.center[
+### brendank@pennmedicine.upenn.edu
+]
+
+
+
+---
+class: middle center hide-count
+background-image: url(img/giorgio-trovato-IclGoWB6wEY-unsplash.jpg)
+background-size: cover
+
+.title-subtext[Questions?]
+
+.callout-url-bottom[  
+.fade-in[<span style="font-size:0.5em; color:white">slides ↓ </span>]  
+<span style="link-color:white">[bjklab.org](http://www.bjklab.org)</span>  
+]  
+
+
