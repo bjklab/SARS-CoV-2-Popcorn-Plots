@@ -34,7 +34,7 @@ xaringanExtra::use_webcam()
 xaringanExtra::use_tachyons()
 xaringanExtra::use_animate_css()
 xaringanExtra::use_share_again()
-xaringanExtra::use_freezeframe()
+#xaringanExtra::use_freezeframe()
 #xaringanExtra::use_scribble(pen_color = "#56106E")
 ```
 
@@ -136,7 +136,7 @@ background-size: contain
 
 ---
 
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='85%'}
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
 knitr::include_graphics(path = "figs/scv2_snv_diversity_per_position_and_time_clear_color.gif")
 
 ```
@@ -144,7 +144,7 @@ knitr::include_graphics(path = "figs/scv2_snv_diversity_per_position_and_time_cl
 
 ---
 
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='85%'}
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
 knitr::include_graphics(path = "figs/scv2_snv_diversity_per_position_and_time_shadow_color.gif")
 
 ```
