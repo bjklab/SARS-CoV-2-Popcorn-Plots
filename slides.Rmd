@@ -45,7 +45,7 @@ background-size: cover
 
 .move-top20[
 .title-text[<span style='font-size:0.9em'>SARS-CoV-2 Evolution</span>]  
-.title-subtext[<span style='font-size:0.9em'>Nucleotide Variants & Case Incidence in the Philadelphia Region</span>]  
+.title-subtext[<span style='font-size:0.9em'>Diversity & Case Incidence in the Philadelphia Region</span>]  
 ]  
   
 .callout-url-leftcorner[
@@ -206,18 +206,61 @@ knitr::include_graphics(path = "figs/p_lmm_logdiff_color.png")
 ```
 
 
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/scv2_peptide_diversity_per_position_and_time_clear.gif")
+
+```
+
 
 ---
-exclude: true
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/scv2_peptide_diversity_per_position_and_time_shadow.gif")
+
+```
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/p_lm_logdiff_peptide_color.png")
+
+```
+
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "figs/p_lm_logdiff_peptide_color_tag.png")
+
+```
+
+
+
+
+
+
+
+
+---
+exclude: false
 
 ## Conclusions    
   
 .pad-left[
 
-- COVID-19 molecular evolution          
+- COVID-19 molecular evolution & the Canyon Hypothesis
 
-- The Canyon Hypothesis  
-  
+    - Wolf et al *mBio* 2022
+
+- Next steps:  
+
+    - mixed effects model with regularizing prior for peptide analysis
+    
+    - covariance across sites
+    
+    - ORF1ab primer target identification
   
 ]
 
